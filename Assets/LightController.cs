@@ -6,7 +6,7 @@ public class LightController : MonoBehaviour
 {
     public Light light;
     public GameObject plate;
-    private float rotationSpeedPerFrame = 3f * 2.0f * Mathf.PI / 60.0f;
+    private float rotationSpeedPerFrame = 1f * 2.0f * Mathf.PI;
     private float flashInterval = 0.10f;
 
     private int lightingFrame = 2;
@@ -40,7 +40,7 @@ public class LightController : MonoBehaviour
             lightFrameCount = 0;
         }
 
-        plate.transform.RotateAroundLocal(plate.transform.up, rotationSpeedPerFrame);
+        plate.transform.RotateAroundLocal(plate.transform.up, rotationSpeedPerFrame * Time.fixedDeltaTime);
     }
 
     void OnGUI()
