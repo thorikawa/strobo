@@ -36,6 +36,6 @@ public class StroboController : MonoBehaviour
 
     void OnGUI()
     {
-        flashInterval = GUI.HorizontalSlider(new Rect(20, 20, 300, 20), flashInterval, 0.0f, 1.0f);
+        flashInterval = GUI.HorizontalSlider(new Rect(20, 20, 300, 20), flashInterval, 0.0f, 0.3f);
     }
 }
